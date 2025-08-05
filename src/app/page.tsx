@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 const AgentsLogo: React.FC<{ className?: string }> = ({ className = "w-16 h-16" }) => (
@@ -17,7 +19,6 @@ export default function Home() {
   return (
     <div className="font-sans min-h-screen flex flex-col items-center justify-center p-8 pb-20 gap-16 sm:p-20 bg-gradient-to-br from-blue-50 to-purple-50">
       <main className="flex flex-col gap-[32px] items-center text-center w-full max-w-2xl">
-        {/* Agents.ai Logo */}
         <div className="flex flex-col items-center gap-4">
           <AgentsLogo className="w-20 h-20" />
           <div className="text-center">
@@ -26,7 +27,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Congratulations Message */}
         <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md mx-auto border border-gray-100">
           <div className="text-center space-y-4">
             <div className="w-20 h-20 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-lg relative overflow-hidden">
@@ -36,26 +36,21 @@ export default function Home() {
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-gray-800">Welcome to Agents.ai!</h2>
-            <p className="text-gray-600 leading-relaxed">
-              Congratulations! You've successfully signed in to your Agents.ai account. 
-              You're now ready to experience AI-powered browser automation at its finest.
+            <p className="text-gray-600 leading-relaxed text-center">
+              Please close this tab and return to your browser extension to complete the login process.
             </p>
           </div>
         </div>
 
         <div className="flex gap-4 items-center justify-center">
-          <a
-            className="rounded-full border border-solid border-transparent transition-all flex items-center justify-center bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 text-white gap-2 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 font-medium text-sm sm:text-base h-12 px-6 sm:px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 relative overflow-hidden"
-            href="https://agents.ai"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            className="bg-color-to-red"
+            onClick={() => 
+              window.close()
+            }
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-full"></div>
-            <svg className="w-5 h-5 relative z-10" fill="none" stroke="white" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <span className="relative z-10">Get Started</span>
-          </a>
+            <span className="relative z-10">Close Browser</span>
+          </button>
         </div>
       </main>
       <footer className="flex gap-[24px] flex-wrap items-center justify-center text-gray-500 mt-auto">
