@@ -42,15 +42,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex gap-4 items-center justify-center">
-          <button
-            className="bg-color-to-red"
-            onClick={() => 
-              window.close()
-            }
-          >
-            <span className="relative z-10">Close Browser</span>
-          </button>
+        <div
+          className="border px-6 text-white py-2 bg-red-500 rounded-full"
+          onClick={() => 
+            window.close()
+          }
+        >
+          Close Browser
         </div>
       </main>
       <footer className="flex gap-[24px] flex-wrap items-center justify-center text-gray-500 mt-auto">
