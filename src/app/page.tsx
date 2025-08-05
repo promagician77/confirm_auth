@@ -15,8 +15,8 @@ const AgentsLogo: React.FC<{ className?: string }> = ({ className = "w-16 h-16" 
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-gradient-to-br from-blue-50 to-purple-50">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start text-center">
+    <div className="font-sans min-h-screen flex flex-col items-center justify-center p-8 pb-20 gap-16 sm:p-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <main className="flex flex-col gap-[32px] items-center text-center w-full max-w-2xl">
         {/* Agents.ai Logo */}
         <div className="flex flex-col items-center gap-4">
           <AgentsLogo className="w-20 h-20" />
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
 
         {/* Congratulations Message */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto border border-gray-100">
+        <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md mx-auto border border-gray-100">
           <div className="text-center space-y-4">
             <div className="w-20 h-20 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto shadow-lg relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent rounded-full"></div>
@@ -43,9 +43,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row text-black">
-                      <a
-            className="rounded-full border border-solid border-transparent transition-all flex items-center justify-center bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 text-white gap-2 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 font-medium text-sm sm:text-base h-12 px-6 sm:px-8 sm:w-auto shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 relative overflow-hidden"
+        <div className="flex gap-4 items-center justify-center">
+          <a
+            className="rounded-full border border-solid border-transparent transition-all flex items-center justify-center bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 text-white gap-2 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 font-medium text-sm sm:text-base h-12 px-6 sm:px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 relative overflow-hidden"
             href="https://agents.ai"
             target="_blank"
             rel="noopener noreferrer"
@@ -58,7 +58,7 @@ export default function Home() {
           </a>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-gray-500">
+      <footer className="flex gap-[24px] flex-wrap items-center justify-center text-gray-500 mt-auto">
         <span className="text-sm">© 2024 Agents.ai. All rights reserved.</span>
       </footer>
     </div>
